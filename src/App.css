@@ -1,1 +1,35 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  @apply min-w-[400px];
+  @apply max-w-[1200px];
+  @apply mx-auto;
+}
+
+.navbar {
+  @apply max-w-[1200px];
+}
+
+
+.members-grid {
+  @apply grid grid-cols-4 content-center place-items-center pt-20 z-0;
+}
+
+@media (max-width: 1600px) {
+  .members-grid {
+    @apply grid-cols-3;
+  }
+}
+
+@media (max-width: 1200px) {
+  .members-grid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 800px) {
+  .members-grid {
+    @apply grid-cols-1;
+  }
+}
